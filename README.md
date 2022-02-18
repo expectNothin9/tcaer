@@ -19,10 +19,9 @@ Highly recommend to develop React through an integrated toolchain (e.g. [Create 
 - Live-editing CSS and JS in development.
 - Don't require configuration to get started.
 
-There are also online playgrounds to play around with React, such like [CodeSandbox](https://codesandbox.io/s/new)'s React template.
-
 In addition, more [toolchains](https://en.reactjs.org/docs/create-a-new-react-app.html#recommended-toolchains) out there for different purposes.
 
+There are also online playgrounds to play around with React, such like [CodeSandbox](https://codesandbox.io/s/new)'s React template. Furthermore, you can import existing github repo into CodeSandBox playground, e.g. [expectNothin9/tcaer](https://codesandbox.io/s/github/expectNothin9/tcaer).
 ## Write React in **Functional Component** manner
 
 **Functional Component** is a JavaScript function that return HTML or UI which is written in **JSX** syntax.
@@ -435,7 +434,7 @@ const CheckInForm = () => {
 ## Summary
 
 - Use **Create React App** to develop React application
-- Write React component in **funtional component** style
+- Write React component in **funtional component** manner
 - Pass data through `props` among components and do `propTypes` check
 - Common **conditional rendering** syntax
 - Basic event handling
