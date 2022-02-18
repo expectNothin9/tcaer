@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
-function App() {
+import Greeting from './Greeting'
+import Counter from './Counter'
+import RecordsList from './RecordsList'
+import PollingExample from './PollingExample'
+import LastNameWithContext from './LastNameWithContext'
+import LastNameWithoutContext from './LastNameWithoutContext'
+import { SnackbarContextProvider, Snackbar } from './SnackbarContext'
+import Ad from './Ad'
+import CheckInForm from './CheckInForm'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <SnackbarContextProvider>
+      <div className="app">
+        <Greeting userName="CodeSandbox" />
+        <Counter />
+        <CheckInForm />
+        <RecordsList />
+        <PollingExample />
+        <LastNameWithContext />
+        <LastNameWithoutContext />
+        <Snackbar />
+        <Ad />
+      </div>
+    </SnackbarContextProvider>
+  )
 }
 
-export default App;
+export default App

@@ -320,6 +320,10 @@ const TiggerSnackbar = () => {
 
 ## `useRef` hook
 
+Allow you to **access the DOM**, if you pass a ref object to React with `<div ref={myRef} />`, React will set its `.current` property to the corresponding DOM node whenever that node changes
+
+- For example: click outside
+
 ```js
 import { useRef, useEffect, useState } from 'react'
 
@@ -346,9 +350,6 @@ const Ad = () => {
   ) : null
 }
 ```
-
-- Allow you to **access the DOM**, if you pass a ref object to React with `<div ref={myRef} />`, React will set its `.current` property to the corresponding DOM node whenever that node changes
-  - For example: click outside
 
 ## More essential concept of `useRef`
 
@@ -427,20 +428,35 @@ const CheckInForm = () => {
 }
 ```
 
-- Personal recommendation `onSituation={handleSomething}` naming convention
+- Personal recommendation `onSituation={handleSomething}` naming convention and coding style
 - Returns a **memorized** callback
   - Just like `useEffect`, use [exhaustive-deps](https://github.com/facebook/react/issues/14920) rule to lint is highly recommended
 
-## State management for complicated application
+## Summary
 
-Use [Redux](https://redux.js.org/introduction/getting-started) (⭐️ [57.5k](https://github.com/reduxjs/redux))
+- Use **Create React App** to develop React application
+- Write React component in **funtional component** style
+- Pass data through `props` among components and do `propTypes` check
+- Common **conditional rendering** syntax
+- Basic event handling
+- **React hooks** you must know
+  - `useState` - state management
+  - `useEffect` - do something after rendering and without user interaction
+  - `useContext` - share data without passing `props`
+  - `useRef` - access the DOM
+  - `useCallback` - **memorized** callback function
+- Idea of `useEffect` and `useCallback` dependency array
 
-## Add `className` on your component appropriately
+## Personal Recommendations
+
+### State management for complicated application
+
+Use [Redux](https://redux.js.org/introduction/getting-started) (⭐️ [57.5k](https://github.com/reduxjs/redux)), instead of manage application by `useContext` approach
+
+### Add `className` on your component appropriately
 
 - Readability of website
 - Easy to debug or trace code
 - Automation or tracking purpose
 
 ## Any question?
-
-CodeSandbox: https://codesandbox.io/s/busy-mirzakhani-4riks
